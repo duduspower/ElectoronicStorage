@@ -7,4 +7,5 @@
 
     <include file="add_resistor.xml" relativeToChangelogFile="true"/>
     <include file="changelog/add_capacitor.xml"/>
+    <include file="changelog/add_resistor_barcode.xml"/>
 </databaseChangeLog>

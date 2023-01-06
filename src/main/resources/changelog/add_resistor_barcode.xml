@@ -1,0 +1,38 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="add_resistor_barcode" author="dduda">
+        <createTable tableName="resistor_barcode">
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="unique_id" type="varchar(36)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="resistor_id" type="varchar(36)">
+                <constraints unique="true" nullable="true"/>
+            </column>
+            <column name="color1" type="tinyint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="color2" type="tinyint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="color3" type="tinyint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="color4" type="tinyint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="color5" type="tinyint">
+                <constraints nullable="true"/>
+            </column>
+            <column name="color6" type="tinyint">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <createSequence sequenceName="resistor_barcode_seq"/>
+    </changeSet>
+</databaseChangeLog>

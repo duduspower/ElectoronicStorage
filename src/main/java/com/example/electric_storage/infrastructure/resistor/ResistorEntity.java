@@ -25,6 +25,8 @@ public class ResistorEntity {
 
   private String uniqueId;
 
+  private String barcodeId;
+
   private double resistance;
 
   @Enumerated(EnumType.STRING)

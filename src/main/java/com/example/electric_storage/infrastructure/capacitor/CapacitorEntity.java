@@ -20,8 +20,8 @@ import lombok.Setter;
 public class CapacitorEntity {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "resistor_seq")
-  @SequenceGenerator(sequenceName = "resistor_seq", allocationSize = 1, name = "resistor_seq")
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "capacitor_seq")
+  @SequenceGenerator(sequenceName = "capacitor_seq", allocationSize = 1, name = "capacitor_seq")
   private Long id;
 
   private String uniqueId;

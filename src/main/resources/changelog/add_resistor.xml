@@ -11,6 +11,9 @@
             <column name="unique_id" type="varchar(36)">
                 <constraints unique="true" nullable="false"/>
             </column>
+            <column name="barcode_id" type="varchar(36)">
+                <constraints unique="true" nullable="true"/>
+            </column>
             <column name="resistance" type="int">
                 <constraints nullable="false"/>
             </column>
@@ -18,5 +21,6 @@
             <column name="tolerance" type="int"/>
             <column name="power" type="int"/>
         </createTable>
+        <createSequence sequenceName="resistor_seq"/>
     </changeSet>
 </databaseChangeLog>

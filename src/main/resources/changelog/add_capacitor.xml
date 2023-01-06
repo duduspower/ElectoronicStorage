@@ -20,5 +20,6 @@
             <column name="impedance" type="int"/>
             <column name="capacitor_type" type="varchar(12)"/>
         </createTable>
+        <createSequence sequenceName="capacitor_seq"/>
     </changeSet>
 </databaseChangeLog>

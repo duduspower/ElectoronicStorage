@@ -6,6 +6,7 @@ import lombok.Builder;
 @Builder(toBuilder = true)
 public record Resistor(
     String uniqueId,
+    String barcodeId,
     double resistance,
     ValueMultiplier multiplier,
     double tolerance,
