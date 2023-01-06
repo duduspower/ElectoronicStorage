@@ -2,6 +2,7 @@ package com.example.electric_storage.infrastructure.resistor;
 
 import com.example.electric_storage.infrastructure.common.ValueMultiplier;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,8 +25,11 @@ public class ResistorEntity {
 
   private String uniqueId;
 
-  private int resistance;
-  @Enumerated private ValueMultiplier multiplier;
-  private float tolerance;
-  private float power;
+  private double resistance;
+
+  @Enumerated(EnumType.STRING)
+  private ValueMultiplier multiplier;
+
+  private double tolerance;
+  private double power;
 }

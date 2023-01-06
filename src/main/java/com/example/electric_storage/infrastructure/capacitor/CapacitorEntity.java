@@ -3,6 +3,7 @@ package com.example.electric_storage.infrastructure.capacitor;
 import com.example.electric_storage.domain.capacitor.CapacitorType;
 import com.example.electric_storage.infrastructure.common.ValueMultiplier;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,10 +25,15 @@ public class CapacitorEntity {
   private Long id;
 
   private String uniqueId;
-  private int capacitance;
-  @Enumerated private ValueMultiplier multiplier;
-  private float tolerance;
-  private float power;
-  private int impedance;
-  @Enumerated private CapacitorType capacitorType;
+  private double capacitance;
+
+  @Enumerated(EnumType.STRING)
+  private ValueMultiplier multiplier;
+
+  private double tolerance;
+  private double power;
+  private double impedance;
+
+  @Enumerated(EnumType.STRING)
+  private CapacitorType capacitorType;
 }

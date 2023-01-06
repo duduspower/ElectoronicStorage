@@ -4,11 +4,10 @@ import com.example.electric_storage.domain.capacitor.CapacitorType;
 import com.example.electric_storage.infrastructure.common.ValueMultiplier;
 
 public record CapacitorResponse(
-    Long id,
     String uniqueId,
-    int capacitance,
+    double capacitance,
     ValueMultiplier multiplier,
-    float tolerance,
-    float power,
-    int impedance,
+    double tolerance,
+    double power,
+    double impedance,
     CapacitorType capacitorType) {}

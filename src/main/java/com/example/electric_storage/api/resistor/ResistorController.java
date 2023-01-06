@@ -23,12 +23,12 @@ public class ResistorController {
   @GetMapping
   public List<ResistorResponse> getResistors() {
     var resistors = service.getResistors();
-    return resistors.stream().map(mapper::toResistorResponse).toList();
+    return resistors.stream().map(mapper::toResponse).toList();
   }
 
   @PostMapping
   public ResponseEntity<?> addResistor(@RequestBody ResistorRequest request) {
-    var resistor = mapper.toResistor(request);
+    var resistor = mapper.toDomain(request);
     resistor = resistor.toBuilder().uniqueId(UUID.randomUUID().toString()).build();
     service.addResistor(resistor);
     return ResponseEntity.ok().build();

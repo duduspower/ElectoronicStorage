@@ -5,7 +5,7 @@ import org.mapstruct.Mapper;
 
 @Mapper
 public interface ResistorApiMapper {
-  Resistor toResistor(ResistorRequest request);
+  Resistor toDomain(ResistorRequest request);
 
-  ResistorResponse toResistorResponse(Resistor response);
+  ResistorResponse toResponse(Resistor response);
 }

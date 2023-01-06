@@ -1,8 +1,8 @@
 package com.example.electric_storage.infrastructure.resistor;
 
 import com.example.electric_storage.infrastructure.common.BarcodeColor;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,23 +21,18 @@ public class ResistorBarcodeEntity {
 
   private String uniqueId;
 
-  @Column(name = "1_barcode")
-  @Enumerated
+  @Enumerated(EnumType.STRING)
   private BarcodeColor firstBarcode;
 
-  @Column(name = "2_barcode")
-  @Enumerated
+  @Enumerated(EnumType.STRING)
   private BarcodeColor secondBarcode;
 
-  @Column(name = "3_barcode")
-  @Enumerated
+  @Enumerated(EnumType.STRING)
   private BarcodeColor thirdBarcode;
 
-  @Column(name = "4_barcode")
-  @Enumerated
+  @Enumerated(EnumType.STRING)
   private BarcodeColor fourthBarcode;
 
-  @Column(name = "5_barcode")
-  @Enumerated
+  @Enumerated(EnumType.STRING)
   private BarcodeColor fifthBarcode;
 }

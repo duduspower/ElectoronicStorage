@@ -5,11 +5,10 @@ import lombok.Builder;
 
 @Builder(toBuilder = true)
 public record Capacitor(
-    Long id,
     String uniqueId,
-    int capacitance,
+    double capacitance,
     ValueMultiplier multiplier,
-    float tolerance,
-    float power,
-    int impedance,
+    double tolerance,
+    double power,
+    double impedance,
     CapacitorType capacitorType) {}

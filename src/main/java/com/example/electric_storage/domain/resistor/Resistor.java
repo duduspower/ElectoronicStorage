@@ -5,4 +5,8 @@ import lombok.Builder;
 
 @Builder(toBuilder = true)
 public record Resistor(
-    String uniqueId, int resistance, ValueMultiplier multiplier, float tolerance, float power) {}
+    String uniqueId,
+    double resistance,
+    ValueMultiplier multiplier,
+    double tolerance,
+    double power) {}
