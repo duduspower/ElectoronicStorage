@@ -1,13 +1,11 @@
 package com.example.electric_storage.domain.resistor.barcode;
 
-import com.example.electric_storage.infrastructure.common.BarcodeColor;
 import com.example.electric_storage.infrastructure.resistor.barcode.ResistorBarcodeRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -15,11 +13,6 @@ public class ResistorBarcodeServiceImpl implements ResistorBarcodeService {
 
   private final ResistorBarcodeRepository repository;
   private final ResistorBarcodeMapper mapper;
-
-  @Override
-  public ResistorBarcode calculateBarcode(List<BarcodeColor> colors) {
-    return null;
-  }
 
   @Override
   public Collection<ResistorBarcode> getResistorBarcodes() {
