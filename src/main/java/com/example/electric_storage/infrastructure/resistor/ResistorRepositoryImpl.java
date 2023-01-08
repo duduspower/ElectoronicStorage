@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
@@ -16,6 +17,11 @@ public class ResistorRepositoryImpl implements ResistorRepository {
   @Override
   public List<ResistorEntity> getResistors() {
     return jpaRepository.findAll();
+  }
+
+  @Override
+  public Optional<ResistorEntity> getResistorByUniqueId(String uniqueId) {
+    return jpaRepository.findByUniqueId(uniqueId);
   }
 
   @Override

@@ -9,5 +9,7 @@ public interface ResistorService {
 
   List<Resistor> getResistors();
 
+  Resistor getResistorByUniqueId(String uniqueId);
+
   void addResistor(Resistor resistor);
 }
