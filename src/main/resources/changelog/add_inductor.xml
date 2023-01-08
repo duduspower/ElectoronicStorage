@@ -1,0 +1,41 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="add_inductor" author="dduda">
+        <createTable tableName="inductor">
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="unique_id" type="varchar(36)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="inductance" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="inductance_multiplier" type="varchar(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="tolerance" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="self_resonant_frequency" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="self_resonant_frequency_multiplier" type="varchar(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dc_resistance" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rated_current" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="with_core" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createSequence sequenceName="inductor_seq"/>
+    </changeSet>
+</databaseChangeLog>

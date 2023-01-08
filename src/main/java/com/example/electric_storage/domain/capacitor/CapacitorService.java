@@ -8,5 +8,7 @@ import java.util.List;
 public interface CapacitorService {
   List<Capacitor> getCapacitors();
 
+  Capacitor getCapacitorByUniqueId(String uniqueId);
+
   void save(Capacitor capacitor);
 }

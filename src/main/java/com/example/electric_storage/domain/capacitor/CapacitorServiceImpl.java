@@ -18,6 +18,11 @@ public class CapacitorServiceImpl implements CapacitorService {
   }
 
   @Override
+  public Capacitor getCapacitorByUniqueId(String uniqueId) {
+    return repository.getCapacitorByUniqueId(uniqueId);
+  }
+
+  @Override
   public void save(Capacitor capacitor) {
     repository.save(capacitor);
   }
