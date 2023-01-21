@@ -1,0 +1,53 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="add_diode" author="dduda">
+        <createTable tableName="diode">
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="unique_id" type="varchar(36)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="type" type="varchar(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="resistance" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="resistance_multiplier" type="varchar(12)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="capacitance" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="capacitance_multiplier" type="varchar(12)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="saturation_current" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="saturation_current_multiplier" type="varchar(12)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="forward_voltage" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="forward_voltage_multiplier" type="varchar(12)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="backward_voltage" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="backward_voltage_multiplier" type="varchar(12)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createSequence sequenceName="diode_seq"/>
+    </changeSet>
+</databaseChangeLog>

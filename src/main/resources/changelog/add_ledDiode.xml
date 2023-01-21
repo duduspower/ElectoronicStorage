@@ -1,0 +1,41 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="add_led_diode" author="dduda">
+        <createTable tableName="led_diode">
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="unique_id" type="varchar(36)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="color" type="varchar(36)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="voltage" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="voltage_multiplier" type="varchar(12)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="lux_power" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="power_multiplier" type="varchar(12)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="current" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="current_multiplier" type="varchar(12)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createSequence sequenceName="led_diode_seq"/>
+    </changeSet>
+</databaseChangeLog>

@@ -10,4 +10,6 @@
     <include file="changelog/add_resistor_barcode.xml"/>
     <include file="changelog/add_inductor.xml"/>
     <include file="changelog/add_fuse.xml"/>
+    <include file="changelog/add_diode.xml"/>
+    <include file="changelog/add_ledDiode.xml"/>
 </databaseChangeLog>
