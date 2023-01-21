@@ -1,7 +1,7 @@
 package com.example.electric_storage.api.diode.normal;
 
-import com.example.electric_storage.infrastructure.common.ValueMultiplier;
-import com.example.electric_storage.infrastructure.diode.normal.DiodeType;
+import com.example.electric_storage.domain.common.ValueMultiplier;
+import com.example.electric_storage.domain.diode.normal.DiodeType;
 
 public record DiodeResponse(
     String uniqueId,

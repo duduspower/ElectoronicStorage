@@ -1,6 +1,7 @@
 package com.example.electric_storage.infrastructure.fuse;
 
-import com.example.electric_storage.infrastructure.common.ValueMultiplier;
+import com.example.electric_storage.domain.common.ValueMultiplier;
+import com.example.electric_storage.domain.fuse.FuseType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

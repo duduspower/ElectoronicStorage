@@ -1,4 +1,4 @@
-package com.example.electric_storage.infrastructure.common;
+package com.example.electric_storage.domain.common;
 
 public enum BarcodeColor {
   BLACK((byte) 0),

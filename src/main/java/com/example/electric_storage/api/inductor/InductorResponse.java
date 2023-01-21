@@ -1,6 +1,6 @@
 package com.example.electric_storage.api.inductor;
 
-import com.example.electric_storage.infrastructure.common.ValueMultiplier;
+import com.example.electric_storage.domain.common.ValueMultiplier;
 
 public record InductorResponse(
     String uniqueId,

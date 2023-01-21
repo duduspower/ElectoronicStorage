@@ -1,6 +1,6 @@
 package com.example.electric_storage.api.resistor.barcode;
 
-import com.example.electric_storage.infrastructure.common.BarcodeColor;
+import com.example.electric_storage.domain.common.BarcodeColor;
 
 public record ResistorBarcodeRequest(
     String resistorId,

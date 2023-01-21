@@ -1,7 +1,7 @@
 package com.example.electric_storage.api.diode.led;
 
-import com.example.electric_storage.infrastructure.common.ValueMultiplier;
-import com.example.electric_storage.infrastructure.diode.led.LedColor;
+import com.example.electric_storage.domain.common.ValueMultiplier;
+import com.example.electric_storage.domain.diode.led.LedColor;
 
 public record LedDiodeResponse(
     String uniqueId,

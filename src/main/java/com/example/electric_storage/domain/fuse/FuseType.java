@@ -1,4 +1,4 @@
-package com.example.electric_storage.infrastructure.fuse;
+package com.example.electric_storage.domain.fuse;
 
 public enum FuseType {
   THERMOPLASTIC,

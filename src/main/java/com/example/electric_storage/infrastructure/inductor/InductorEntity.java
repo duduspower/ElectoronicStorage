@@ -1,6 +1,6 @@
 package com.example.electric_storage.infrastructure.inductor;
 
-import com.example.electric_storage.infrastructure.common.ValueMultiplier;
+import com.example.electric_storage.domain.common.ValueMultiplier;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

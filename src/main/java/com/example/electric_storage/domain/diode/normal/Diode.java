@@ -1,7 +1,6 @@
 package com.example.electric_storage.domain.diode.normal;
 
-import com.example.electric_storage.infrastructure.common.ValueMultiplier;
-import com.example.electric_storage.infrastructure.diode.normal.DiodeType;
+import com.example.electric_storage.domain.common.ValueMultiplier;
 import lombok.Builder;
 
 @Builder(toBuilder = true)

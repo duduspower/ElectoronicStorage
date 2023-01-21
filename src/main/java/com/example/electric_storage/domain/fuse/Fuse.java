@@ -1,7 +1,6 @@
 package com.example.electric_storage.domain.fuse;
 
-import com.example.electric_storage.infrastructure.common.ValueMultiplier;
-import com.example.electric_storage.infrastructure.fuse.FuseType;
+import com.example.electric_storage.domain.common.ValueMultiplier;
 import lombok.Builder;
 
 @Builder(toBuilder = true)

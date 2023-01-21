@@ -1,6 +1,7 @@
 package com.example.electric_storage.infrastructure.diode.led;
 
-import com.example.electric_storage.infrastructure.common.ValueMultiplier;
+import com.example.electric_storage.domain.common.ValueMultiplier;
+import com.example.electric_storage.domain.diode.led.LedColor;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

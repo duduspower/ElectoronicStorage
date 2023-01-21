@@ -1,7 +1,7 @@
 package com.example.electric_storage.api.capacitor;
 
 import com.example.electric_storage.domain.capacitor.CapacitorType;
-import com.example.electric_storage.infrastructure.common.ValueMultiplier;
+import com.example.electric_storage.domain.common.ValueMultiplier;
 
 public record CapacitorResponse(
     String uniqueId,

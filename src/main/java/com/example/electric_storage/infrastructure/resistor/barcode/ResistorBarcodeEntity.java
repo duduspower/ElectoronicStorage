@@ -1,6 +1,6 @@
 package com.example.electric_storage.infrastructure.resistor.barcode;
 
-import com.example.electric_storage.infrastructure.common.BarcodeColor;
+import com.example.electric_storage.domain.common.BarcodeColor;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

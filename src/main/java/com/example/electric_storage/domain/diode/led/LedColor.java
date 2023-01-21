@@ -1,4 +1,4 @@
-package com.example.electric_storage.infrastructure.diode.led;
+package com.example.electric_storage.domain.diode.led;
 
 public enum LedColor {
   WHITE,

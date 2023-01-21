@@ -1,6 +1,6 @@
 package com.example.electric_storage.domain.resistor.barcode;
 
-import com.example.electric_storage.infrastructure.common.BarcodeColor;
+import com.example.electric_storage.domain.common.BarcodeColor;
 import lombok.Builder;
 
 @Builder(toBuilder = true)
