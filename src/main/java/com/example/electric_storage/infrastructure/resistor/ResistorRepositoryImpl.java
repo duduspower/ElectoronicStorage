@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class ResistorRepositoryImpl implements ResistorRepository {
+class ResistorRepositoryImpl implements ResistorRepository {
   private final ResistorJpaRepository jpaRepository;
   private final ResistorMapper resistorMapper;
 

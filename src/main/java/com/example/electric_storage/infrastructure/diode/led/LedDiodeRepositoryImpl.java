@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class LedDiodeRepositoryImpl implements LedDiodeRepository {
+class LedDiodeRepositoryImpl implements LedDiodeRepository {
 
   private final LedDiodeJpaRepository repository;
 

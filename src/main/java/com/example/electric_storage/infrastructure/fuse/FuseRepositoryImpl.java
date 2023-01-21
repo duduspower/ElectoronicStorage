@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class FuseRepositoryImpl implements FuseRepository {
+class FuseRepositoryImpl implements FuseRepository {
 
   private final FuseJpaRepository repository;
 

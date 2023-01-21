@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class InductorRepositoryImpl implements InductorRepository {
+class InductorRepositoryImpl implements InductorRepository {
 
   private final InductorJpaRepository jpaRepository;
 

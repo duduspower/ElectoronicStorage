@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class ResistorBarcodeRepositoryImpl implements ResistorBarcodeRepository {
+class ResistorBarcodeRepositoryImpl implements ResistorBarcodeRepository {
 
   private final ResistorBarcodeJpaRepository jpaRepository;
 

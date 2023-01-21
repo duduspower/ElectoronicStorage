@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
-public class CapacitorRepositoryImpl implements CapacitorRepository {
+class CapacitorRepositoryImpl implements CapacitorRepository {
 
   private final CapacitorJpaRepository jpaRepository;
   private final CapacitorMapper mapper;

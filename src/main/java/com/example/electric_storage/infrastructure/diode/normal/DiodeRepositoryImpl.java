@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class DiodeRepositoryImpl implements DiodeRepository {
+class DiodeRepositoryImpl implements DiodeRepository {
   private final DiodeJpaRepository repository;
 
   @Override
