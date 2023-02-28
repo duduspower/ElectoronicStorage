@@ -1,0 +1,3 @@
+package com.example.electric_storage.infrastructure.transistor.additionalparameters;
+
+public class JFETAdditionalTransistorParameters implements AdditionalTransistorParameters {}
