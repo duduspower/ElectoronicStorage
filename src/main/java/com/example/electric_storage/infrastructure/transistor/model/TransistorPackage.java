@@ -1,4 +1,4 @@
-package com.example.electric_storage.infrastructure.transistor;
+package com.example.electric_storage.infrastructure.transistor.model;
 
 public enum TransistorPackage {
   TO3,

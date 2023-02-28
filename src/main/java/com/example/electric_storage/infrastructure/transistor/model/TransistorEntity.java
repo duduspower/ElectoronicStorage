@@ -1,8 +1,8 @@
-package com.example.electric_storage.infrastructure.transistor;
+package com.example.electric_storage.infrastructure.transistor.model;
 
 import com.example.electric_storage.domain.common.ValueMultiplier;
-import com.example.electric_storage.infrastructure.transistor.additionalparameters.AdditionalTransistorParameters;
-import com.example.electric_storage.infrastructure.transistor.pins.pinout.TransistorPinOut;
+import com.example.electric_storage.infrastructure.transistor.model.additionalparameters.AdditionalTransistorParameters;
+import com.example.electric_storage.infrastructure.transistor.model.pins.pinout.TransistorPinOut;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

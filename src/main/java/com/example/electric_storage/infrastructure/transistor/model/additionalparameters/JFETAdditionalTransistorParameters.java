@@ -1,4 +1,4 @@
-package com.example.electric_storage.infrastructure.transistor.additionalparameters;
+package com.example.electric_storage.infrastructure.transistor.model.additionalparameters;
 
 import com.example.electric_storage.domain.common.ValueMultiplier;
 import jakarta.persistence.Entity;
@@ -16,8 +16,8 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "bjt_transistor_parameters")
-public class BJTAdditionalTransistorParameters implements AdditionalTransistorParameters {
+@Table(name = "jfet_transistor_parameters")
+public class JFETAdditionalTransistorParameters implements AdditionalTransistorParameters {
 
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transistor_seq")
@@ -25,32 +25,22 @@ public class BJTAdditionalTransistorParameters implements AdditionalTransistorPa
   private Long id;
 
   private String uniqueId;
-  double collectorEmiterVoltageWithEmiterVoltageEqualsZero;
+  double drainSourceVoltage;
 
   @Enumerated(EnumType.STRING)
-  ValueMultiplier collectorEmiterVoltageWithEmiterVoltageEqualsZeroMultiplier;
+  ValueMultiplier drainSourceVoltageMultiplier;
 
-  double collectorEmiterVoltageWithBaseVoltageEqualsZero;
-
-  @Enumerated(EnumType.STRING)
-  ValueMultiplier collectorEmiterVoltageWithBaseVoltageEqualsZeroMultiplier;
-
-  double emiterBaseVoltage;
+  double gateSourceVoltage;
 
   @Enumerated(EnumType.STRING)
-  ValueMultiplier emiterBaseVoltageMultiplier;
+  ValueMultiplier gateSourceVoltageMultiplier;
 
-  double collectorCurrent;
-
-  @Enumerated(EnumType.STRING)
-  ValueMultiplier collectorCurrentMultiplier;
-
-  double collectorPeakCurrent;
+  double gateCurrent;
 
   @Enumerated(EnumType.STRING)
-  ValueMultiplier collectorPeakCurrentMultiplier;
+  ValueMultiplier gateCurrentMultiplier;
 
   @OneToOne(mappedBy = "temperature")
   TransistorTemperature temperature;
 }
-// https://datasheetspdf.com/pdf/464962/STMicroelectronics/PN2222A/1
+// https://datasheetspdf.com/pdf/1124548/Motorola/2N4222/1

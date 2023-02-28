@@ -1,4 +1,4 @@
-package com.example.electric_storage.infrastructure.transistor.additionalparameters;
+package com.example.electric_storage.infrastructure.transistor.model.additionalparameters;
 
 import com.example.electric_storage.domain.common.ValueMultiplier;
 import jakarta.persistence.Entity;
