@@ -16,7 +16,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table
+@Table(name = "bjt_transistor_pinout")
 class BJTTransistorPinOut implements TransistorPinType, TransistorPinOut {
 
   @Id

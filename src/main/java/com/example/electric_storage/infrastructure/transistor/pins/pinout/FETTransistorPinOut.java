@@ -16,7 +16,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table
+@Table(name = "fet_transistor_pinout")
 class FETTransistorPinOut implements TransistorPinType, TransistorPinOut {
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transistor_seq")
