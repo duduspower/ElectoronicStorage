@@ -1,46 +1,36 @@
-package com.example.electric_storage.infrastructure.transistor.additionalparameters;
+package com.example.electric_storage.infrastructure.transistor.pins.pinout;
 
-import com.example.electric_storage.domain.common.ValueMultiplier;
+import com.example.electric_storage.infrastructure.transistor.pins.TransistorPinType;
+import com.example.electric_storage.infrastructure.transistor.pins.pintype.FETPinType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
-@Table(name = "jfet_transistor_parameters")
-public class JFETAdditionalTransistorParameters implements AdditionalTransistorParameters {
-
+@Entity
+@Table
+class FETTransistorPinOut implements TransistorPinType, TransistorPinOut {
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transistor_seq")
   @SequenceGenerator(sequenceName = "transistor_seq", allocationSize = 1, name = "transistor_seq")
   private Long id;
 
   private String uniqueId;
-  double drainSourceVoltage;
 
   @Enumerated(EnumType.STRING)
-  ValueMultiplier drainSourceVoltageMultiplier;
-
-  double gateSourceVoltage;
+  private FETPinType pin1;
 
   @Enumerated(EnumType.STRING)
-  ValueMultiplier gateSourceVoltageMultiplier;
-
-  double gateCurrent;
+  private FETPinType pin2;
 
   @Enumerated(EnumType.STRING)
-  ValueMultiplier gateCurrentMultiplier;
-
-  @OneToOne(mappedBy = "temperature")
-  TransistorTemperature temperature;
+  private FETPinType pin3;
 }
-// https://datasheetspdf.com/pdf/1124548/Motorola/2N4222/1

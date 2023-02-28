@@ -5,11 +5,11 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
 
-    <include file="add_resistor.xml" relativeToChangelogFile="true"/>
-    <include file="changelog/add_capacitor.xml"/>
-    <include file="changelog/add_resistor_barcode.xml"/>
-    <include file="changelog/add_inductor.xml"/>
-    <include file="changelog/add_fuse.xml"/>
-    <include file="changelog/add_diode.xml"/>
-    <include file="changelog/add_ledDiode.xml"/>
+    <include file="resistor/add_resistor.xml" relativeToChangelogFile="true"/>
+    <include file="changelog/capacitor/add_capacitor.xml"/>
+    <include file="changelog/resistor/add_resistor_barcode.xml"/>
+    <include file="changelog/inductor/add_inductor.xml"/>
+    <include file="changelog/fuse/add_fuse.xml"/>
+    <include file="changelog/diode/add_diode.xml"/>
+    <include file="changelog/diode/add_ledDiode.xml"/>
 </databaseChangeLog>
