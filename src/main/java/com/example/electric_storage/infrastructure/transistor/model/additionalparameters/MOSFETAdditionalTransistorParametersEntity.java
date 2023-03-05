@@ -18,7 +18,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "mosfet_transistor_parameters")
-public class MOSFETAdditionalTransistorParametersEntity implements AdditionalTransistorParametersEntity {
+public class MOSFETAdditionalTransistorParametersEntity implements AdditionalTransistorParameterEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "mosfet_transistor_parameters_seq")

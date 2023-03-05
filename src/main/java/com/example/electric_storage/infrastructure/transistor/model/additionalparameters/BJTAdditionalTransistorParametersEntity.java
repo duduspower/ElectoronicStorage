@@ -18,7 +18,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "bjt_transistor_parameters")
-public class BJTAdditionalTransistorParametersEntity implements AdditionalTransistorParametersEntity {
+public class BJTAdditionalTransistorParametersEntity implements AdditionalTransistorParameterEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "bjt_transistor_parameters_seq")

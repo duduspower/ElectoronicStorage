@@ -1,4 +1,4 @@
 package com.example.electric_storage.infrastructure.transistor.model.additionalparameters;
 
-public interface AdditionalTransistorParametersEntity {
+public interface AdditionalTransistorParameterEntity {
 }

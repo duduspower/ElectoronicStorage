@@ -1,7 +1,7 @@
 package com.example.electric_storage.infrastructure.transistor.model;
 
 import com.example.electric_storage.domain.common.ValueMultiplier;
-import com.example.electric_storage.infrastructure.transistor.model.additionalparameters.AdditionalTransistorParametersEntity;
+import com.example.electric_storage.infrastructure.transistor.model.additionalparameters.AdditionalTransistorParameterEntity;
 import com.example.electric_storage.infrastructure.transistor.model.pinout.TransistorPinOutEntity;
 
 interface TransistorEntity {
@@ -27,5 +27,5 @@ interface TransistorEntity {
 
     TransistorPinOutEntity getPinout();
 
-    AdditionalTransistorParametersEntity getAdditionalParameters();
+    AdditionalTransistorParameterEntity getAdditionalParameters();
 }

@@ -1,7 +1,10 @@
 package com.example.electric_storage.infrastructure.transistor.repositories.additionalparameters.bjt;
 
 import com.example.electric_storage.infrastructure.transistor.model.additionalparameters.BJTAdditionalTransistorParametersEntity;
+import com.example.electric_storage.infrastructure.transistor.repositories.additionalparameters.AdditionalTransistorParametersJpaRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-interface BJTAdditionalTransistorParametersJpaRepository extends JpaRepository<BJTAdditionalTransistorParametersEntity, Long> {
+interface BJTAdditionalTransistorParametersJpaRepository extends JpaRepository<BJTAdditionalTransistorParametersEntity, Long>, AdditionalTransistorParametersJpaRepository {
+
+
 }

@@ -7,8 +7,8 @@ import org.mapstruct.Mapper;
 @Mapper
 interface BJTAdditionalTransistorParametersEntityMapper {
 
-    BJTAdditionalTransistorParametersEntity toDomain(BJTAdditionalTransistorParameters domain);
+    BJTAdditionalTransistorParameters toDomain(BJTAdditionalTransistorParametersEntity entity);
 
-    BJTAdditionalTransistorParameters toEntity(BJTAdditionalTransistorParametersEntity entity);
+    BJTAdditionalTransistorParametersEntity toEntity(BJTAdditionalTransistorParameters domain);
 
 }
