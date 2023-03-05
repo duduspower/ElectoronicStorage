@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @RequiredArgsConstructor
 class BJTTransistorPinOutRepositoryImpl implements BJTTransistorPinOutRepository {
     private final BJTTransistorPinOutJpaRepository jpaRepository;
+    private final BJTTransistorPinOutEntityMapper mapper;
 }

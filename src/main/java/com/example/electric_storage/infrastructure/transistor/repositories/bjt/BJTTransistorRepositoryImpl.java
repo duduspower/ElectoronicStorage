@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @RequiredArgsConstructor
 class BJTTransistorRepositoryImpl implements BJTTransistorRepository {
     private final BJTTransistorJpaRepository jpaRepository;
+    private final BJTTransistorEntityMapper mapper;
 }

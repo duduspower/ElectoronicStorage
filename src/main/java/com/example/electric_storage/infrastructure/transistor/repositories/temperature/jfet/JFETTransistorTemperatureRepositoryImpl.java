@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @RequiredArgsConstructor
 class JFETTransistorTemperatureRepositoryImpl implements JFETTransistorTemperatureRepository {
     private final JFETTransistorTemperatureJpaRepository jpaRepository;
+    private final JFETTransistorTemperatureEntityMapper mapper;
 }

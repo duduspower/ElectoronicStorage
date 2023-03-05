@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @RequiredArgsConstructor
 class MOSFETTransistorRepositoryImpl implements MOSFETTransistorRepository {
     private final MOSFETTransistorJpaRepository jpaRepository;
+    private final MOSFETTransistorEntityMapper mapper;
 }

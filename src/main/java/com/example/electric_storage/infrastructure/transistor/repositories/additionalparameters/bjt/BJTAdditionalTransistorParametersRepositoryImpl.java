@@ -8,5 +8,6 @@ import org.springframework.stereotype.Repository;
 class BJTAdditionalTransistorParametersRepositoryImpl implements BJTAdditionalTransistorParametersRepository {
 
     private final BJTAdditionalTransistorParametersJpaRepository jpaRepository;
+    private final BJTAdditionalTransistorParametersEntityMapper mapper;
 
 }
