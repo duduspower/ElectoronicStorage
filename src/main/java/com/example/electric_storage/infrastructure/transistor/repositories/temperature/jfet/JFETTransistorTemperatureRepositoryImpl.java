@@ -1,4 +1,10 @@
 package com.example.electric_storage.infrastructure.transistor.repositories.temperature.jfet;
 
-class JFETTransistorTemperatureRepositoryImpl {
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@RequiredArgsConstructor
+class JFETTransistorTemperatureRepositoryImpl implements JFETTransistorTemperatureRepository {
+    private final JFETTransistorTemperatureJpaRepository jpaRepository;
 }

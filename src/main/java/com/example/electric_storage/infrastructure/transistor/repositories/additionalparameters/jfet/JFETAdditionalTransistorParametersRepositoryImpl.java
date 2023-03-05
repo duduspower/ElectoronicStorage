@@ -1,4 +1,10 @@
 package com.example.electric_storage.infrastructure.transistor.repositories.additionalparameters.jfet;
 
-class JFETAdditionalTransistorParametersRepositoryImpl {
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@RequiredArgsConstructor
+class JFETAdditionalTransistorParametersRepositoryImpl implements JFETAdditionalTransistorParametersRepository {
+    private final JFETAdditionalTransistorParametersJpaRepository jpaRepository;
 }

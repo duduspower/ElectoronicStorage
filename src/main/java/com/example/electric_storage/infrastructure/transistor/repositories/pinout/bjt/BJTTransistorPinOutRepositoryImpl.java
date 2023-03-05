@@ -1,4 +1,10 @@
 package com.example.electric_storage.infrastructure.transistor.repositories.pinout.bjt;
 
-class BJTTransistorPinOutRepositoryImpl {
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@RequiredArgsConstructor
+class BJTTransistorPinOutRepositoryImpl implements BJTTransistorPinOutRepository {
+    private final BJTTransistorPinOutJpaRepository jpaRepository;
 }
