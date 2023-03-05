@@ -1,6 +1,7 @@
 package com.example.electric_storage.infrastructure.transistor.model.additionalparameters;
 
 import com.example.electric_storage.domain.common.ValueMultiplier;
+import com.example.electric_storage.infrastructure.transistor.model.temperature.BJTTransistorTemperatureEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -17,11 +18,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "bjt_transistor_parameters")
-public class BJTAdditionalTransistorParameters implements AdditionalTransistorParameters {
+public class BJTAdditionalTransistorParametersEntity implements AdditionalTransistorParametersEntity {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transistor_seq")
-  @SequenceGenerator(sequenceName = "transistor_seq", allocationSize = 1, name = "transistor_seq")
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "bjt_transistor_parameters_seq")
+  @SequenceGenerator(sequenceName = "bjt_transistor_parameters_seq", allocationSize = 1, name = "bjt_transistor_parameters_seq")
   private Long id;
 
   private String uniqueId;
@@ -50,7 +51,7 @@ public class BJTAdditionalTransistorParameters implements AdditionalTransistorPa
   @Enumerated(EnumType.STRING)
   ValueMultiplier collectorPeakCurrentMultiplier;
 
-  @OneToOne(mappedBy = "temperature")
-  TransistorTemperature temperature;
+  @OneToOne(mappedBy = "parameters")
+  BJTTransistorTemperatureEntity temperature;
 }
 // https://datasheetspdf.com/pdf/464962/STMicroelectronics/PN2222A/1

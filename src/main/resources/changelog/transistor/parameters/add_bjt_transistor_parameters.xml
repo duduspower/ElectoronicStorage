@@ -1,0 +1,36 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="add_bjt_transistor_parameters" author="dduda">
+        <createTable tableName="bjt_transistor_parameters">
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="unique_id" type="varchar(36)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="collector_emiter_voltage_with_emiter_voltage_equals_zero" type="double"/>
+            <column name="collector_emiter_voltage_with_emiter_voltage_equals_zero_multiplier" type="varchar(12)"/>
+
+            <column name="collector_emiter_voltage_with_base_voltage_equals_zero" type="double"/>
+            <column name="collector_emiter_voltage_with_base_voltage_equals_zero_multiplier" type="varchar(12)"/>
+
+            <column name="emiter_base_voltage" type="double"/>
+            <column name="emiter_base_voltage_multiplier" type="varchar(12)"/>
+
+            <column name="collector_current" type="double"/>
+            <column name="collector_current_multiplier" type="varchar(12)"/>
+
+            <column name="collector_peak_current" type="double"/>
+            <column name="collector_peak_current_multiplier" type="varchar(12)"/>
+
+            <column name="temperature" type="varchar(36)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+
+        </createTable>
+        <createSequence sequenceName="bjt_transistor_parameters_seq"/>
+    </changeSet>
+</databaseChangeLog>

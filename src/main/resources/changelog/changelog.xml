@@ -12,4 +12,16 @@
     <include file="changelog/fuse/add_fuse.xml"/>
     <include file="changelog/diode/add_diode.xml"/>
     <include file="changelog/diode/add_ledDiode.xml"/>
+    <include file="changelog/transistor/parameters/add_bjt_transistor_parameters.xml"/>
+    <include file="changelog/transistor/parameters/add_jfet_transistor_parameters.xml"/>
+    <include file="changelog/transistor/parameters/add_mosfet_transistor_parameters.xml"/>
+    <include file="changelog/transistor/pinout/add_bjt_pinout.xml"/>
+    <include file="changelog/transistor/pinout/add_jfet_pinout.xml"/>
+    <include file="changelog/transistor/pinout/add_mosfet_pinout.xml"/>
+    <include file="changelog/transistor/add_bjt_transistor.xml"/>
+    <include file="changelog/transistor/add_jfet_transistor.xml"/>
+    <include file="changelog/transistor/add_mosfet_transistor.xml"/>
+    <include file="changelog/transistor/temperature/add_bjt_transistor_temperature.xml"/>
+    <include file="changelog/transistor/temperature/add_jfet_transistor_temperature.xml"/>
+    <include file="changelog/transistor/temperature/add_mosfet_transistor_temperature.xml"/>
 </databaseChangeLog>

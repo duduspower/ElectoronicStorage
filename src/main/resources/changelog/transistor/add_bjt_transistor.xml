@@ -1,0 +1,36 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="add_bjt_transistor" author="dduda">
+        <createTable tableName="bjt_transistor">
+            <column name="id" type="bigserial" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="unique_id" type="varchar(36)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="transistor_package" type="varchar(12)"/>
+            <column name="transistor_type" type="varchar(12)"/>
+
+            <column name="max_voltage" type="double"/>
+            <column name="max_voltage_multiplier" type="varchar(12)"/>
+
+            <column name="max_current" type="double"/>
+            <column name="max_current_multiplier" type="varchar(12)"/>
+
+            <column name="max_power" type="double"/>
+            <column name="max_power_multiplier" type="varchar(12)"/>
+
+            <column name="pinout" type="varchar(36)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="additional_parameters" type="varchar(36)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+        </createTable>
+        <createSequence sequenceName="bjt_transistor_seq"/>
+    </changeSet>
+</databaseChangeLog>

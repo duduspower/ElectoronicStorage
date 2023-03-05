@@ -3,28 +3,24 @@
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
 
-    <changeSet id="add_jfet_transistor_parameters" author="dduda">
-        <createTable tableName="jfet_transistor_parameters">
+    <changeSet id="add_jfet_transistor_temperature" author="dduda">
+        <createTable tableName="jfet_transistor_temperature">
             <column name="id" type="bigserial" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="unique_id" type="varchar(36)">
                 <constraints unique="true" nullable="false"/>
             </column>
-
-            <column name="drain_source_voltage" type="double"/>
-            <column name="drain_source_voltage_multiplier" type="varchar(12)"/>
-
-            <column name="gate_source_voltage" type="double"/>
-            <column name="gate_source_voltage_multiplier" type="varchar(12)"/>
-
-            <column name="gate_current" type="double"/>
-            <column name="gate_current_multiplier" type="varchar(12)"/>
-
-            <column name="temperature" type="varchar(36)">
+            <column name="max_operating_temperature" type="double">
+                <constraints unique="false" nullable="false"/>
+            </column>
+            <column name="storageTemperature" type="double">
+                <constraints unique="false" nullable="false"/>
+            </column>
+            <column name="parameters" type="varchar(36)">
                 <constraints unique="true" nullable="false"/>
             </column>
         </createTable>
-        <createSequence sequenceName="jfet_transistor_parameters_seq"/>
+        <createSequence sequenceName="jfet_transistor_temperature_seq"/>
     </changeSet>
 </databaseChangeLog>
