@@ -1,4 +1,7 @@
 package com.example.electric_storage.infrastructure.transistor.repositories.additionalparameters.mosfet;
 
-interface MOSFETAdditionalTransistorParametersJpaRepository {
+import com.example.electric_storage.infrastructure.transistor.model.additionalparameters.MOSFETAdditionalTransistorParametersEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+interface MOSFETAdditionalTransistorParametersJpaRepository extends JpaRepository<MOSFETAdditionalTransistorParametersEntity, Long> {
 }
