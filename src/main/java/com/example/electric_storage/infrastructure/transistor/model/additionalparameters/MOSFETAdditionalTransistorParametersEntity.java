@@ -26,22 +26,22 @@ public class MOSFETAdditionalTransistorParametersEntity implements AdditionalTra
     private Long id;
 
     private String uniqueId;
-    double drainSourceVoltage;
+    private double drainSourceVoltage;
 
     @Enumerated(EnumType.STRING)
-    ValueMultiplier drainSourceVoltageMultiplier;
+    private ValueMultiplier drainSourceVoltageMultiplier;
 
-    double gateSourceVoltageContinuous;
-
-    @Enumerated(EnumType.STRING)
-    ValueMultiplier gateSourceVoltageContinuousMultiplier;
-
-    double drainContinuousCurrent;
+    private double gateSourceVoltageContinuous;
 
     @Enumerated(EnumType.STRING)
-    ValueMultiplier drainContinuousCurrentMultiplier;
+    private ValueMultiplier gateSourceVoltageContinuousMultiplier;
+
+    private double drainContinuousCurrent;
+
+    @Enumerated(EnumType.STRING)
+    private ValueMultiplier drainContinuousCurrentMultiplier;
 
     @OneToOne(mappedBy = "parameters")
-    MOSFETTransistorTemperatureEntity temperature;
+    private MOSFETTransistorTemperatureEntity temperature;
 }
 // https://datasheetspdf.com/pdf/1020668/InchangeSemiconductor/2SK617/1

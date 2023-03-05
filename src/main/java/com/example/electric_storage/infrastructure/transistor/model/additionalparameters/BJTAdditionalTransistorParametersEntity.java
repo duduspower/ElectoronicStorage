@@ -26,32 +26,32 @@ public class BJTAdditionalTransistorParametersEntity implements AdditionalTransi
   private Long id;
 
   private String uniqueId;
-  double collectorEmiterVoltageWithEmiterVoltageEqualsZero;
+  private double collectorEmiterVoltageWithEmiterVoltageEqualsZero;
 
   @Enumerated(EnumType.STRING)
-  ValueMultiplier collectorEmiterVoltageWithEmiterVoltageEqualsZeroMultiplier;
+  private ValueMultiplier collectorEmiterVoltageWithEmiterVoltageEqualsZeroMultiplier;
 
-  double collectorEmiterVoltageWithBaseVoltageEqualsZero;
-
-  @Enumerated(EnumType.STRING)
-  ValueMultiplier collectorEmiterVoltageWithBaseVoltageEqualsZeroMultiplier;
-
-  double emiterBaseVoltage;
+  private double collectorEmiterVoltageWithBaseVoltageEqualsZero;
 
   @Enumerated(EnumType.STRING)
-  ValueMultiplier emiterBaseVoltageMultiplier;
+  private ValueMultiplier collectorEmiterVoltageWithBaseVoltageEqualsZeroMultiplier;
 
-  double collectorCurrent;
-
-  @Enumerated(EnumType.STRING)
-  ValueMultiplier collectorCurrentMultiplier;
-
-  double collectorPeakCurrent;
+  private double emiterBaseVoltage;
 
   @Enumerated(EnumType.STRING)
-  ValueMultiplier collectorPeakCurrentMultiplier;
+  private ValueMultiplier emiterBaseVoltageMultiplier;
+
+  private double collectorCurrent;
+
+  @Enumerated(EnumType.STRING)
+  private ValueMultiplier collectorCurrentMultiplier;
+
+  private double collectorPeakCurrent;
+
+  @Enumerated(EnumType.STRING)
+  private ValueMultiplier collectorPeakCurrentMultiplier;
 
   @OneToOne(mappedBy = "parameters")
-  BJTTransistorTemperatureEntity temperature;
+  private BJTTransistorTemperatureEntity temperature;
 }
 // https://datasheetspdf.com/pdf/464962/STMicroelectronics/PN2222A/1

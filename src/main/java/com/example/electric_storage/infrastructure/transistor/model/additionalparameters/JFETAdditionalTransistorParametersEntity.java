@@ -26,22 +26,22 @@ public class JFETAdditionalTransistorParametersEntity implements AdditionalTrans
     private Long id;
 
     private String uniqueId;
-    double drainSourceVoltage;
+    private double drainSourceVoltage;
 
     @Enumerated(EnumType.STRING)
-    ValueMultiplier drainSourceVoltageMultiplier;
+    private ValueMultiplier drainSourceVoltageMultiplier;
 
-    double gateSourceVoltage;
-
-    @Enumerated(EnumType.STRING)
-    ValueMultiplier gateSourceVoltageMultiplier;
-
-    double gateCurrent;
+    private double gateSourceVoltage;
 
     @Enumerated(EnumType.STRING)
-    ValueMultiplier gateCurrentMultiplier;
+    private ValueMultiplier gateSourceVoltageMultiplier;
+
+    private double gateCurrent;
+
+    @Enumerated(EnumType.STRING)
+    private ValueMultiplier gateCurrentMultiplier;
 
     @OneToOne(mappedBy = "parameters")
-    JFETTransistorTemperatureEntity temperature;
+    private JFETTransistorTemperatureEntity temperature;
 }
 // https://datasheetspdf.com/pdf/1124548/Motorola/2N4222/1
