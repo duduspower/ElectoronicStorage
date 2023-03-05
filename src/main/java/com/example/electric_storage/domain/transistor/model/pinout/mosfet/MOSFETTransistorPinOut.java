@@ -1,13 +1,13 @@
-package com.example.electric_storage.domain.transistor.model.pinout.jfet;
+package com.example.electric_storage.domain.transistor.model.pinout.mosfet;
 
-import com.example.electric_storage.infrastructure.transistor.model.JFETTransistorEntity;
+import com.example.electric_storage.infrastructure.transistor.model.MOSFETTransistorEntity;
 import com.example.electric_storage.infrastructure.transistor.model.pinout.pintype.FETPinType;
 import lombok.Builder;
 import lombok.Value;
 
 @Value
 @Builder(toBuilder = true)
-public class JFETPinOut {
+public class MOSFETTransistorPinOut {
     String uniqueId;
 
     FETPinType pin1;
@@ -16,5 +16,5 @@ public class JFETPinOut {
 
     FETPinType pin3;
 
-    JFETTransistorEntity transistor;
+    MOSFETTransistorEntity transistor;
 }

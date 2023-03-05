@@ -7,7 +7,7 @@ import lombok.Value;
 
 @Value
 @Builder(toBuilder = true)
-public class BJTPinOut {
+public class BJTTransistorPinOut {
      String uniqueId;
 
      BJTPinType pin1;
