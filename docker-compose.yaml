@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    container_name: db
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: storage
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_DB: electronic_storage
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/electronic_storage
+      SPRING_DATASOURCE_USERNAME: storage
+      SPRING_DATASOURCE_PASSWORD: postgres123
+      SPRING_LIQUIBASE_CHANGE-LOG: changelog/changelog.xml
+      SPRING_LIQUIBASE_URL: jdbc:postgresql://db:5432/electronic_storage
+      SPRING_LIQUIBASE_USER: storage
+      SPRING_LIQUIBASE_PASSWORD: postgres123
+    depends_on:
+      - db
