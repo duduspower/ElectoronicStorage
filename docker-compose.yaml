@@ -25,3 +25,11 @@ services:
       SPRING_LIQUIBASE_PASSWORD: postgres123
     depends_on:
       - db
+  jenkins:
+    image: jenkins/jenkins:lts
+    privileged: true
+    user: root
+    ports:
+      - "8083:8080"
+      - "50000:50000"
+    container_name: jenkins
